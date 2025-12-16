@@ -5,6 +5,11 @@ import schedule
 import time
 from datetime import datetime
 import pytz
+import warnings
+
+# Suppress warnings for cleaner logs
+warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action='ignore', category=UserWarning)
 
 def download_and_append(tickers):
     print(f"[{datetime.now()}] Starting data download job...")
